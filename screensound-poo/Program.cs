@@ -14,7 +14,7 @@ musica2.Disponivel = false;
 
 musica2.ExibirFichaTecnica(); */
 
-Banda queen = new Banda("Queen");
+/*Banda queen = new Banda("Queen");
 
 Album albumDoQueen = new Album("A night at the opera");
 
@@ -38,4 +38,23 @@ queen.AdicionarAlbum(albumDoQueen);
 musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
 albumDoQueen.ExibirMusicasDoAlbum();
-queen.ExibirDiscografia();
+queen.ExibirDiscografia();*/
+
+Episodio ep1 = new(2, "Técnicas de facilitação", 45);
+
+ep1.AdicionarConvidados("Ricardo");
+ep1.AdicionarConvidados("Guilherme Silveira");
+ep1.AdicionarConvidados("Carlos Silveira");
+
+Episodio ep2 = new(1, "Técnicas de aprendizado", 67);
+
+ep2.AdicionarConvidados("Fernanda");
+ep2.AdicionarConvidados("Flavio");
+ep2.AdicionarConvidados("Pedro");
+
+Console.WriteLine(ep1.Resumo);
+
+Podcast podcast = new Podcast("Hipster", "Paulo Silveira");
+podcast.AdicionarEpisodio(ep1);
+podcast.AdicionarEpisodio(ep2);
+podcast.ExibirDetalhes();
